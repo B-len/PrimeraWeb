@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="es-Es">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
     <link href="src/css/main.css" rel="stylesheet" type="text/css" >
-    <script src="js/main.js"></script>
     <meta charset="UTF-8">
     <title>Reproductor</title>
 </head>
 <body>
-<div id="titulo"><h1>Reproductor de música</h1></div>
 
-<form action="javascript:undefined">
-    <input type="text" placeholder="Busca aquí el nombre de la cancion"></form>
-    <button type="submit">🔎</button>
-<div id="cuadroMusica">
-    <div id="interaccion">
-        <a href="#">⏯</a>
+
+<h1 class="titulo">Reproductor MP3</h1>
+<div class="flexsearch">
+    <div class="flexsearch--wrapper">
+        <form class="flexsearch--form" action="javascript:buscar(input)" method="get">
+            <div class="flexsearch--input-wrapper">
+                <input id="input" class="flexsearch--input" type="search" placeholder="search...">
+            </div>
+            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+        </form>
     </div>
 </div>
+<div
+        id="canciones">
 
+</div>
+
+<div class="contenedor" ondragover="miOnDragOver(event)" ondrop="miOnDrop(event)"></div>
+
+
+<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js">
+</script>
+<script>
+   console.log(SC);
+</script>
+<script src="src/js/main.j.js"></script>
 </body>
 </html>
